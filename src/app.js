@@ -9,7 +9,7 @@ console.log ('servidor en el puerto 3000')
 
 app.get ('/', async (req,res) => {
     //res.send ('Implantación de app web')
-    const [result] = await pool.query ('Select * from userdb.users')
+    const [result] = await pool.query ('Select * from users')
     res.json(result)
 })
 app.get ('/ping', async(req,res) => {
